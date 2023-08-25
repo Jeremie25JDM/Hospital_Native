@@ -14,4 +14,14 @@ export const FakeActivity=[
         mainText:"Traitement de qualité",
         subText:"Vous aurez un traitement de qualité"
     },
+    {
+        id:4,
+        mainText:"Traitement de qualité",
+        subText:"Vous aurez un traitement de qualité"
+    },
+    {
+        id:5,
+        mainText:"Traitement de qualité",
+        subText:"Vous aurez un traitement de qualité"
+    },
 ]
