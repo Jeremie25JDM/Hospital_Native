@@ -1,14 +1,23 @@
 import React from 'react';
-import {View, StyleSheet,Text} from 'react-native';
-
-const Message = () => {
+import {View, StyleSheet,Text, FlatList} from 'react-native';
+import { fakeMessageListe } from '../../FakeData/FakeListeMessage';
+import MessageCard from '../../composantes/MessageListe/MessageCard';
+import styles from '../../composantes/MessageListe/style';
+const Message = ({navigation}) => {
     return (
-        <View>
-            <Text>ecran message</Text>
-        </View>
+        <FlatList
+        data={fakeMessageListe}
+        keyExtractor={item=>item.id}
+        showsHorizontalScrollIndicator={false}
+        style={styles.globalContainer}
+        renderItem={({item})=>{
+            return(
+                <MessageCard item={item} navigation={navigation}/>
+            )
+        }}
+        />
     );
 }
 
-const styles = StyleSheet.create({})
 
 export default Message;
